@@ -1,6 +1,8 @@
 import { useState } from "react";
 import NavBarList from "./NavBarList";
 import Logo from "../assets/favicon.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 const Header = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -16,7 +18,7 @@ const Header = () => {
         <NavBarList handleNavBarClick="" className="largeNav" />
         <div className="d-lg-none">
           <p onClick={() => handleNavBarClick()} className="pointer position-absolute navBarToggle">
-            Elo
+          <FontAwesomeIcon icon={faBars} style={{ color: "#757575" }} />
           </p>
           <div className={isVisible ? "position-relative" : "d-none"}>
             <NavBarList
