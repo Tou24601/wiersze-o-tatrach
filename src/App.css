@@ -1,38 +1,170 @@
-.App {
-  text-align: center;
+@import-normalize;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+
+html {
+  scroll-behavior: smooth;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: "Roboto", sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.pointer {
+  cursor: pointer;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.italics {
+  font-style: italic;
+}
+
+.header {
+  width: 100vw;
+  height: 60px;
+  font-size: 20px;
+  line-height: 25px;
+  background-color: rgb(255, 255, 255);
+  transition: 0.5s;
+  color: rgb(117, 117, 117);
+  box-shadow: inset -7px -7px 23px 0px rgba(117, 117, 117, 1);
+}
+
+.logo {
+  display: none;
+}
+
+.navBarToggle {
+  top: 25px;
+  left: 25px;
+}
+
+.smallNav {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 2px solid rgb(117, 117, 117);
+  position: absolute;
+  padding: 20px 30px;
+  z-index: 1;
+}
+
+.largeNav {
+  display: none;
+}
+
+.mainContainer {
+  width: 100vw;
+  height: calc(100vh - 60px);
+  position: absolute;
+  bottom: 0px;
+  overflow: scroll;
+}
+
+.poemHolder {
+  background-position: left;
+  background-size: cover;
+}
+
+.shadow {
+  width: 100vw;
+  background: rgb(255, 250, 250);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 250, 250, 1) 0%,
+    rgba(255, 250, 250, 0.75) 73%,
+    rgba(255, 255, 255, 0.5) 100%
+  );
+}
+
+.poemTitle {
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+.poemUnderTitle {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.poemFontSizing {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.poemContents {
+  padding-bottom: 100vh;
+  font-weight: bold;
+}
+
+@media screen and (min-width: 992px) {
+  a:hover {
+    font-weight: bolder;
+  }
+
+  .header {
+    width: 150px;
+    height: 100vh;
+    color: rgb(159, 159, 159);
+    box-shadow: inset -7px -7px 35px 5px rgba(117, 117, 117, 1);
+  }
+
+  .header:hover {
+    color: rgb(117, 117, 117);
+    box-shadow: inset -7px -7px 23px 0px rgba(117, 117, 117, 1);
+  }
+
+  .logo {
+    display: initial;
+    width: 110px;
+    margin: 100px 0px 5px 10px;
+  }
+
+  .largeNav {
+    display: initial;
+    top: 25%;
+    padding: 0px;
+  }
+
+  .shadow {
+    width: calc(100vw - 150px);
+    background: linear-gradient(
+      90deg,
+      rgba(255, 250, 250, 1) 0%,
+      rgba(255, 250, 250, 1) 45%,
+      rgba(255, 255, 255, 0) 100%
+    );
+  }
+
+  .poemHolder {
+    background-position: right;
+    background-size: cover;
+  }
+
+  .mainContainer {
+    width: calc(100vw - 150px);
+    height: 100vh;
+    right: 0px;
+  }
+
+  .poemTitle {
+    font-size: 50px;
+  }
+
+  .poemUnderTitle {
+    font-size: 40px;
+  }
+
+  .poemFontSizing {
+    font-size: 30px;
   }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+@media screen and (min-width: 1200px) {
+  .shadow {
+    background-image: linear-gradient(
+      to left,
+      rgba(255, 250, 250, 0),
+      rgb(255, 255, 255)
+    );
   }
 }
