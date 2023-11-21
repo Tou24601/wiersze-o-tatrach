@@ -1,5 +1,4 @@
 import React from "react";
-import { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import RootLayout from "./layouts/RootLayout";
@@ -18,15 +17,17 @@ function App() {
       <Routes>
         <Route path="/" element={<RootLayout />}>
           <Route index element={<Home poemsData={data.poems} />} />
-          <Route element={<ContainerLayout />} >
-          <Route path="lista" element={<PoemsList poemsData={data.poems} />} />
-          <Route
-            path="kredyty"
-            element={<CreditsList poemsData={data.poems} />}
-          />
-                    </Route>
+          <Route element={<ContainerLayout />}>
+            <Route
+              path="lista"
+              element={<PoemsList poemsData={data.poems} />}
+            />
+            <Route
+              path="kredyty"
+              element={<CreditsList poemsData={data.poems} />}
+            />
+          </Route>
           <Route path=":id" element={<PoemPage poemsData={data.poems} />} />
-
         </Route>
       </Routes>
     </BrowserRouter>
