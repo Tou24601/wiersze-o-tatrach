@@ -48,7 +48,7 @@ const handleClick = (newId: string) => {
         mapContainerClassName="mainContainer"
       >
         {poemsData.map((item: Poem) => {
-          const itemId = item.id.toString();
+          //const itemId = item.id.toString();
           return (
               <MarkerF
                 position={{ lat: item.lat, lng: item.lng }}
