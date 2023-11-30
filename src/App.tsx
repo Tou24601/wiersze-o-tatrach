@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import FetchPoems from "./api/fetchPoems";
+import {fetchPoems} from "./api/fetchPoems";
 import RootLayout from "./layouts/RootLayout";
 import ContainerLayout from "./layouts/ContainerLayout";
 import Home from "./pages/Home";
@@ -12,8 +12,20 @@ import "./App.css";
 
 function App() {
   let data = require(`./data/data.json`);
+
+  const [query, setQuery] = useState([])
+
+  useEffect(() => {
+    const newdata = fetchPoems(query)
+    console.log(newdata)
+})
+
+  /*
+  useEffect(() => {
+    fetchPoems(query)
+  });*/
   
-  console.log(FetchPoems)
+  console.log(fetchPoems)
 
   return (
     <BrowserRouter>
