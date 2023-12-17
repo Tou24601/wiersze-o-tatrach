@@ -1,6 +1,5 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { fetchPoems } from "./services/apiPoems.jsx";
 import RootLayout from "./layouts/RootLayout";
 import ContainerLayout from "./layouts/ContainerLayout";
 import Home from "./pages/Home";
@@ -11,15 +10,18 @@ import "./App.css";
 import { useState, useEffect } from "react";
 
 function App() {
-
   const [poemsData, setPoemsData] = useState([]);
 
+  const url = "https://api.jsonbin.io/v3/b/656b45d90574da7622cf41c2";
 
   useEffect(() => {
-    fetchPoems.then((data: {record: Object[]}) => {
-      setPoemsData(data.record.poems);
-      console.log(data)
-    });
+    const newFetchPoems = async () => {
+      const result = await fetch(url);
+      result.json().then((json) => {
+        setPoemsData(json.record.poems);
+      });
+    };
+    newFetchPoems();
   }, []);
 
   let data = require(`./data/data.json`);
@@ -30,10 +32,7 @@ function App() {
         <Route path="/" element={<RootLayout />}>
           <Route index element={<Home poemsData={poemsData} />} />
           <Route element={<ContainerLayout />}>
-            <Route
-              path="lista"
-              element={<PoemsList poemsData={poemsData} />}
-            />
+            <Route path="lista" element={<PoemsList poemsData={poemsData} />} />
             <Route
               path="kredyty"
               element={<CreditsList poemsData={poemsData} />}

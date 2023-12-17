@@ -13,6 +13,7 @@ interface Props {
 }
 
 const PoemsList = ({ poemsData }: Props) => {
+  console.log(poemsData)
   return (
 
       <ul >

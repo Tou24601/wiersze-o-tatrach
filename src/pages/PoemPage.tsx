@@ -16,14 +16,16 @@ interface Props {
 }
 
 const PoemPage = ({ poemsData }: Props) => {
-  const [currentPoemData, setCurrentPoemData] = useState<Array<Poem>>([]);
+  //const [currentPoemData, setCurrentPoemData] = useState<Array<Poem>>([]);
   const { id } = useParams();
   const currentPoemId = Number(id);
+  console.log(currentPoemId);
   console.log(poemsData);
-
+/*
   useEffect(() => {
     setCurrentPoemData(poemsData);
-  }, [poemsData]);
+    console.log(poemsData)
+  }, [poemsData]);*/
 
   return (
     <>
