@@ -5,7 +5,7 @@ import ContainerLayout from "./layouts/ContainerLayout";
 import Home from "./pages/Home";
 import PoemsList from "./pages/PoemsList";
 import CreditsList from "./pages/CreditsList";
-import PoemPage from "./pages/PoemPage";
+import PoemPage, {poemsLoader} from "./pages/PoemPage";
 import "./App.css";
 import { useState, useEffect } from "react";
 
@@ -30,6 +30,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<RootLayout />}>
+          
           <Route index element={<Home poemsData={poemsData} />} />
           <Route element={<ContainerLayout />}>
             <Route path="lista" element={<PoemsList poemsData={poemsData} />} />
@@ -38,7 +39,9 @@ function App() {
               element={<CreditsList poemsData={poemsData} />}
             />
           </Route>
-          <Route path=":id" element={<PoemPage poemsData={poemsData} />} />
+          <Route path=":id" element={<PoemPage poemsData={poemsData} />} 
+          loader={poemsLoader} 
+          />
         </Route>
       </Routes>
     </BrowserRouter>
@@ -46,3 +49,5 @@ function App() {
 }
 
 export default App;
+
+

@@ -1,4 +1,4 @@
-import { useParams } from "react-router";
+import { useParams, useLoaderData } from "react-router";
 import { useState, useEffect } from "react";
 
 interface Poem {
@@ -13,25 +13,24 @@ interface Poem {
 
 interface Props {
   poemsData: Array<Poem>;
+  npoemsData: Array<Poem>;
 }
 
 const PoemPage = ({ poemsData }: Props) => {
-  //const [currentPoemData, setCurrentPoemData] = useState<Array<Poem>>([]);
+ // const [currentPoemData, setCurrentPoemData] = useState<Array<Poem>>([]);
   const { id } = useParams();
   const currentPoemId = Number(id);
+  const npoemsData: Props = useLoaderData();
+
   console.log(currentPoemId);
-  console.log(poemsData);
-/*
-  useEffect(() => {
-    setCurrentPoemData(poemsData);
-    console.log(poemsData)
-  }, [poemsData]);*/
+  console.log(npoemsData);
+
 
   return (
     <>
       <div
         className="poemHolder mainContainer"
-        style={{ backgroundImage: `url(${poemsData[currentPoemId].picture})` }}
+        style={{ backgroundImage: `url(${npoemsData[currentPoemId].picture})` }}
       >
         <div className="shadow position-relative p-3 pt-5 p-lg-5 ">
           <h3
@@ -64,3 +63,12 @@ const PoemPage = ({ poemsData }: Props) => {
   );
 };
 export default PoemPage;
+
+export const poemsLoader = async () => {
+  const url = "https://api.jsonbin.io/v3/b/656b45d90574da7622cf41c2";
+  const result = await fetch(url);
+  result.json().then((json) => {
+    console.log(json.record.poem)
+    return json.record.poems;
+  });
+}
