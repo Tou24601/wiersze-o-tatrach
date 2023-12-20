@@ -5,7 +5,7 @@ import ContainerLayout from "./layouts/ContainerLayout";
 import Home from "./pages/Home";
 import PoemsList from "./pages/PoemsList";
 import CreditsList from "./pages/CreditsList";
-import PoemPage, {poemsLoader} from "./pages/PoemPage";
+import PoemPage from "./pages/PoemPage";
 import "./App.css";
 import { useState, useEffect } from "react";
 
@@ -40,7 +40,7 @@ function App() {
             />
           </Route>
           <Route path=":id" element={<PoemPage poemsData={poemsData} />} 
-          loader={poemsLoader} 
+      //    loader={poemsLoader} 
           />
         </Route>
       </Routes>

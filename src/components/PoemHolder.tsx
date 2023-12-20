@@ -1,4 +1,5 @@
-import { useParams } from "react-router";
+import { useParams, useLoaderData } from "react-router";
+import { useState, useEffect } from "react";
 
 interface Poem {
   id: number;
@@ -12,45 +13,51 @@ interface Poem {
 
 interface Props {
   poemsData: Array<Poem>;
+  poemId: number
 }
 interface Poems {
   array: Array<Poem>;
 }
 
-const PoemPage = ({ poemsData }: Props) => {
-  const { id } = useParams();
-  const currentPoemId = Number(id);
-  let data = require(`../data/data.json`);
+const PoemHolder = ({ poemsData, poemId }: Props) => {
+ // const [currentPoemData, setCurrentPoemData] = useState<Array<Poem>>([]);
+  /*const { id } = useParams();
+  const currentPoemId = Number(id);*/
+ // const npoemsData: Poem = useLoaderData();
+
+  //console.log(currentPoemId);
+  console.log(poemsData);
+
 
   return (
     <>
       <div
         className="poemHolder mainContainer"
-        style={{ backgroundImage: `url(${poemsData[currentPoemId].picture})` }}
+        style={{ backgroundImage: `url(${poemsData[poemId].picture})` }}
       >
         <div className="shadow position-relative p-3 pt-5 p-lg-5 ">
           <h3
             className="poemTitle"
-            dangerouslySetInnerHTML={{ __html: poemsData[currentPoemId].title }}
+            dangerouslySetInnerHTML={{ __html: poemsData[poemId].title }}
           ></h3>
           <p
             className={
-              poemsData[currentPoemId].underTitle ? "poemUnderTitle" : "d-none"
+              poemsData[poemId].underTitle ? "poemUnderTitle" : "d-none"
             }
             dangerouslySetInnerHTML={{
-              __html: poemsData[currentPoemId].underTitle,
+              __html: poemsData[poemId].underTitle,
             }}
           ></p>
           <p
             className="poemFontSizing italics pt-1 pt-lg-3 pb-1 pb-lg-4 "
             dangerouslySetInnerHTML={{
-              __html: poemsData[currentPoemId].authors,
+              __html: poemsData[poemId].authors,
             }}
           ></p>
           <p
             className="poemFontSizing poemContents lh-base fw-bolder"
             dangerouslySetInnerHTML={{
-              __html: poemsData[currentPoemId].contents,
+              __html: poemsData[poemId].contents,
             }}
           ></p>
         </div>
@@ -58,5 +65,4 @@ const PoemPage = ({ poemsData }: Props) => {
     </>
   );
 };
-
-export default PoemPage;
+export default PoemHolder;

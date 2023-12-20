@@ -13,9 +13,9 @@ interface Poem {
 const Home = ({poemsData} : Props) => {
 
     return (
-        <div>
+        <>
             <MapHolder poemsData={poemsData} />
-        </div>
+        </>
     )
 }
 
