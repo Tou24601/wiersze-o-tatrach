@@ -12,10 +12,3 @@ const fetchPoems = async () => {
   }
 }
 export { fetchPoems };
-
-  /*
-const fetchPoems = fetch(url)
-  .then((resp) => resp.json())
-  .catch((err) => console.log(err));
-
-export { fetchPoems };*/

@@ -24,13 +24,10 @@ function App() {
     newFetchPoems();
   }, []);
 
-  let data = require(`./data/data.json`);
-
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<RootLayout />}>
-          
           <Route index element={<Home poemsData={poemsData} />} />
           <Route element={<ContainerLayout />}>
             <Route path="lista" element={<PoemsList poemsData={poemsData} />} />
@@ -39,9 +36,7 @@ function App() {
               element={<CreditsList poemsData={poemsData} />}
             />
           </Route>
-          <Route path=":id" element={<PoemPage poemsData={poemsData} />} 
-      //    loader={poemsLoader} 
-          />
+          <Route path=":id" element={<PoemPage poemsData={poemsData} />} />
         </Route>
       </Routes>
     </BrowserRouter>
@@ -49,5 +44,3 @@ function App() {
 }
 
 export default App;
-
-

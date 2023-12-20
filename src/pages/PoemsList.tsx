@@ -13,25 +13,23 @@ interface Props {
 }
 
 const PoemsList = ({ poemsData }: Props) => {
-  console.log(poemsData)
   return (
-
-      <ul >
-        {poemsData.map((item: Poem) => (
-          <li key={item.id} className="textPadding">
-            <a
-              href={item.id.toString()}
-              className="text-reset text-decoration-none"
-            >
-              <ListTitleAuthorHolder
-                id={item.id}
-                title={item.title}
-                authors={item.authors}
-              />
-            </a>
-          </li>
-        ))}
-      </ul>
+    <ul>
+      {poemsData.map((item: Poem) => (
+        <li key={item.id} className="textPadding">
+          <a
+            href={item.id.toString()}
+            className="text-reset text-decoration-none"
+          >
+            <ListTitleAuthorHolder
+              id={item.id}
+              title={item.title}
+              authors={item.authors}
+            />
+          </a>
+        </li>
+      ))}
+    </ul>
   );
 };
 

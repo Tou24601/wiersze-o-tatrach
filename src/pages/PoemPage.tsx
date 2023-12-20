@@ -26,31 +26,33 @@ const PoemPage = ({ poemsData }: Props) => {
     <>
       <div
         className="poemHolder mainContainer"
-        style={{ backgroundImage: `url(${poemsData[currentPoemId].picture})` }}
+        style={{ backgroundImage: `url(${data.poems[currentPoemId].picture})` }}
       >
         <div className="shadow position-relative p-3 pt-5 p-lg-5 ">
           <h3
             className="poemTitle"
-            dangerouslySetInnerHTML={{ __html: poemsData[currentPoemId].title }}
+            dangerouslySetInnerHTML={{
+              __html: data.poems[currentPoemId].title,
+            }}
           ></h3>
           <p
             className={
-              poemsData[currentPoemId].underTitle ? "poemUnderTitle" : "d-none"
+              data.poems[currentPoemId].underTitle ? "poemUnderTitle" : "d-none"
             }
             dangerouslySetInnerHTML={{
-              __html: poemsData[currentPoemId].underTitle,
+              __html: data.poems[currentPoemId].underTitle,
             }}
           ></p>
           <p
             className="poemFontSizing italics pt-1 pt-lg-3 pb-1 pb-lg-4 "
             dangerouslySetInnerHTML={{
-              __html: poemsData[currentPoemId].authors,
+              __html: data.poems[currentPoemId].authors,
             }}
           ></p>
           <p
             className="poemFontSizing poemContents lh-base fw-bolder"
             dangerouslySetInnerHTML={{
-              __html: poemsData[currentPoemId].contents,
+              __html: data.poems[currentPoemId].contents,
             }}
           ></p>
         </div>
