@@ -6,7 +6,11 @@
             "src": "./favicon.ico",
             "type": "image/ico",
             "sizes": "446x446"
-
+        },
+        {
+            "src": "../src/assets/tatry.png",
+            "type": "image/png",
+            "sizes": "512x512"
         }
     ],
     "start_url": ".",
