@@ -1,5 +1,5 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter as BrowserRouter, Routes, Route } from "react-router-dom";
 import RootLayout from "./layouts/RootLayout";
 import ContainerLayout from "./layouts/ContainerLayout";
 import Home from "./pages/Home";
