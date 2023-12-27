@@ -26,12 +26,12 @@ const PoemPage = ({ poemsData }: Props) => {
         style={{ backgroundImage: `url(${data.poems[currentPoemId].picture})` }}
       >
         <div className="shadow position-relative p-3 pt-5 p-lg-5 ">
-          <h3
+          <p
             className="poemTitle"
             dangerouslySetInnerHTML={{
               __html: data.poems[currentPoemId].title,
             }}
-          ></h3>
+          ></p>
           <p
             className={
               data.poems[currentPoemId].underTitle ? "poemUnderTitle" : "d-none"
@@ -47,7 +47,7 @@ const PoemPage = ({ poemsData }: Props) => {
             }}
           ></p>
           <p
-            className="poemFontSizing poemContents lh-base fw-bolder"
+            className="poemFontSizing poemContents lh-base"
             dangerouslySetInnerHTML={{
               __html: data.poems[currentPoemId].contents,
             }}

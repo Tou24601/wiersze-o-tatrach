@@ -6,6 +6,7 @@ html {
 
 body {
   font-family: "Roboto", sans-serif;
+  font-weight: 100;
 }
 
 .pointer {
@@ -78,17 +79,14 @@ ul {
 
 .poemTitle {
   font-size: 20px;
-  font-weight: 250;
 }
 
 .poemUnderTitle {
   font-size: 18px;
-  font-weight: 250;
 }
 
 .poemFontSizing {
   font-size: 16px;
-  font-weight: 200;
 }
 
 .poemContents {
@@ -96,9 +94,6 @@ ul {
 }
 
 @media screen and (min-width: 992px) {
-  a:hover {
-    font-weight: bolder;
-  }
 
   .header {
     width: 150px;
@@ -110,6 +105,10 @@ ul {
   .header:hover {
     color: rgb(117, 117, 117);
     box-shadow: inset -7px -7px 23px 0px rgba(117, 117, 117, 1);
+  }
+
+  .header a:hover {
+    font-weight: bolder;
   }
 
   .logo {

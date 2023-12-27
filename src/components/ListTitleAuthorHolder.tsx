@@ -6,9 +6,9 @@ interface Props {
 
 const ListTitleAuthorHolder = ({ id, title, authors }: Props) => {
   return (
-    <h4 className="pointer pt-4 lh-base">
+    <p className="pointer pt-4 lh-base fs-4">
       {id + 1}. <span className="italics">{title}</span>, {authors}
-    </h4>
+    </p>
   );
 };
 

@@ -1,6 +1,6 @@
 import { useMemo } from "react";
 import { GoogleMap, useLoadScript, MarkerF } from "@react-google-maps/api";
-import { Link } from "react-router-dom";
+//import { Link } from "react-router-dom";
 
 interface Poem {
   lat: number;
@@ -33,6 +33,11 @@ function Map({ poemsData }: Props) {
     window.open(`#/${newId}`, "_self");
   };
 
+  /*                <Link
+              to={`#/${item.id.toString()}`}
+              className="text-reset text-decoration-none"
+            />*/
+
   return (
     <>
       {" "}
@@ -44,16 +49,14 @@ function Map({ poemsData }: Props) {
         {poemsData.map((item: Poem) => {
           return (
             <>
-            <Link
-              to={`#/${item.id.toString()}`}
-              className="text-reset text-decoration-none"
-            >
+            
               <MarkerF
                 position={{ lat: item.lat, lng: item.lng }}
                 key={item.id}
                 onClick={() => handleClick(item.id.toString())}
-              />
-            </Link>
+              >
+
+              </MarkerF>
             </>
           );
         })}

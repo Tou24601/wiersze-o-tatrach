@@ -32,10 +32,11 @@ const CreditsList = ({ poemsData }: Props) => {
               authors={item.authors}
             />{" "}
             <p className="lh-base">
-              <b>Tekst:</b> {item.poemCredits}
+              <span className="italics">Tekst:</span> {item.poemCredits}
             </p>
             <p className="lh-base">
-              <b>Zdjęcie w tle:</b> {item.pictureCredits}
+              <span className="italics">Zdjęcie w tle:</span>{" "}
+              {item.pictureCredits}
             </p>
           </Link>
         </li>
