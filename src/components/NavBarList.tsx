@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 interface Props {
   handleNavBarClick: any;
   className: string;
@@ -12,18 +14,18 @@ const NavBarList = ({ handleNavBarClick, className }: Props) => {
         </a>
       </li>
       <li className="pt-4 pointer">
-        <a href="/lista" className="text-reset text-decoration-none">
+        <Link to="/lista" className="text-reset text-decoration-none">
           lista
           <br />
           wierszy
-        </a>
+        </Link>
       </li>
       <li className="pt-4 pointer">
-        <a href="/kredyty" className="text-reset text-decoration-none">
+        <Link to="/kredyty" className="text-reset text-decoration-none">
           prawa
           <br />
           autorskie
-        </a>
+        </Link>
       </li>
     </ul>
   );
