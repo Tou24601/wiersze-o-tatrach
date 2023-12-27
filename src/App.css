@@ -78,17 +78,17 @@ ul {
 
 .poemTitle {
   font-size: 20px;
-  font-weight: bolder;
+  font-weight: 250;
 }
 
 .poemUnderTitle {
   font-size: 18px;
-  font-weight: bold;
+  font-weight: 250;
 }
 
 .poemFontSizing {
   font-size: 16px;
-  font-weight: bold;
+  font-weight: 200;
 }
 
 .poemContents {

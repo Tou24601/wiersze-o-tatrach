@@ -44,7 +44,7 @@ function Map({ poemsData }: Props) {
         {poemsData.map((item: Poem) => {
           return (
             <Link
-              to={`/${item.id.toString()}`}
+              to={`#/${item.id.toString()}`}
               className="text-reset text-decoration-none"
             >
               <MarkerF
