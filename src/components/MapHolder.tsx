@@ -30,7 +30,7 @@ function Map({ poemsData }: Props) {
   );
 
   const handleClick = (newId: string) => {
-    window.open(newId, "_self");
+    window.open(`#/${newId}`, "_self");
   };
 
   return (
@@ -43,6 +43,7 @@ function Map({ poemsData }: Props) {
       >
         {poemsData.map((item: Poem) => {
           return (
+            <>
             <Link
               to={`#/${item.id.toString()}`}
               className="text-reset text-decoration-none"
@@ -53,6 +54,7 @@ function Map({ poemsData }: Props) {
                 onClick={() => handleClick(item.id.toString())}
               />
             </Link>
+            </>
           );
         })}
       </GoogleMap>
