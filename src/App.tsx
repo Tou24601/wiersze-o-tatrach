@@ -30,9 +30,9 @@ function App() {
         <Route path="/" element={<RootLayout />}>
           <Route index element={<Home poemsData={poemsData} />} />
           <Route element={<ContainerLayout />}>
-            <Route path="lista" element={<PoemsList poemsData={poemsData} />} />
+            <Route path="/lista" element={<PoemsList poemsData={poemsData} />} />
             <Route
-              path="kredyty"
+              path="/kredyty"
               element={<CreditsList poemsData={poemsData} />}
             />
           </Route>
