@@ -9,9 +9,9 @@ const NavBarList = ({ handleNavBarClick, className }: Props) => {
   return (
     <ul onClick={() => handleNavBarClick} className={className}>
       <li className="pt-4 pointer">
-        <a href="/" className="text-reset text-decoration-none">
+      <Link to="/" className="text-reset text-decoration-none">
           mapa
-        </a>
+        </Link>
       </li>
       <li className="pt-4 pointer">
         <Link to="/lista" className="text-reset text-decoration-none">

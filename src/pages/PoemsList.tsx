@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import ListTitleAuthorHolder from "../components/ListTitleAuthorHolder";
 
 interface Poem {
@@ -17,16 +18,16 @@ const PoemsList = ({ poemsData }: Props) => {
     <ul>
       {poemsData.map((item: Poem) => (
         <li key={item.id} className="textPadding">
-          <a
-            href={item.id.toString()}
+          <Link
+            to={`/${item.id.toString()}`}
             className="text-reset text-decoration-none"
           >
-            <ListTitleAuthorHolder
-              id={item.id}
-              title={item.title}
-              authors={item.authors}
-            />
-          </a>
+              <ListTitleAuthorHolder
+                id={item.id}
+                title={item.title}
+                authors={item.authors}
+              />
+          </Link>
         </li>
       ))}
     </ul>
