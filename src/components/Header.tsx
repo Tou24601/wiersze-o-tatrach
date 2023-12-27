@@ -17,8 +17,11 @@ const Header = () => {
       <nav className="navBar p-4 pt-5">
         <NavBarList handleNavBarClick="" className="largeNav" />
         <div className="d-lg-none">
-          <p onClick={() => handleNavBarClick()} className="pointer position-absolute navBarToggle">
-          <FontAwesomeIcon icon={faBars} style={{ color: "#757575" }} />
+          <p
+            onClick={() => handleNavBarClick()}
+            className="pointer position-absolute navBarToggle"
+          >
+            <FontAwesomeIcon icon={faBars} style={{ color: "#757575" }} />
           </p>
           <div className={isVisible ? "position-relative" : "d-none"}>
             <NavBarList

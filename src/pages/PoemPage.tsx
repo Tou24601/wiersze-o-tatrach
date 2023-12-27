@@ -13,9 +13,6 @@ interface Poem {
 interface Props {
   poemsData: Array<Poem>;
 }
-interface Poems {
-  array: Array<Poem>;
-}
 
 const PoemPage = ({ poemsData }: Props) => {
   const { id } = useParams();

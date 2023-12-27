@@ -1,20 +1,21 @@
 {
-    "short_name": "Tatry",
-    "name": "Wiersze o Tatrach",
-    "icons": [
-        {
-            "src": "./favicon.ico",
-            "type": "image/ico",
-            "sizes": "446x446"
-        },
-        {
-            "src": "../src/assets/tatry.png",
-            "type": "image/png",
-            "sizes": "512x512"
-        }
-    ],
-    "start_url": ".",
-    "display": "standalone",
-    "theme_color": "#000000",
-    "background_color": "#ffffff"
+  "short_name": "Tatry",
+  "name": "Wiersze o Tatrach",
+  "icons": [
+    {
+      "src": "./favicon.ico",
+      "type": "image/ico",
+      "sizes": "446x446"
+    },
+    {
+      "src": "../src/assets/tatry.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
 }
