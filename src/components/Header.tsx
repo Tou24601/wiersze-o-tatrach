@@ -15,7 +15,7 @@ const Header = () => {
     <header className="header">
       <img src={Logo} alt="Wiersze o Tatrach" className="logo" />
       <nav className="navBar p-4 pt-5">
-        <NavBarList handleNavBarClick="" className="largeNav" />
+        <NavBarList className="largeNav" />
         <div className="d-lg-none">
           <p
             onClick={() => handleNavBarClick()}
@@ -23,9 +23,8 @@ const Header = () => {
           >
             <FontAwesomeIcon icon={faBars} style={{ color: "#757575" }} />
           </p>
-          <div className={isVisible ? "position-relative" : "d-none"}>
+          <div className={isVisible ? "position-relative" : "d-none"} onClick={() => handleNavBarClick()}>
             <NavBarList
-              handleNavBarClick={() => handleNavBarClick()}
               className="smallNav d-flex flex-column flex"
             />
           </div>

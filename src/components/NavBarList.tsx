@@ -1,13 +1,12 @@
 import { Link } from "react-router-dom";
 
 interface Props {
-  handleNavBarClick: any;
   className: string;
 }
 
-const NavBarList = ({ handleNavBarClick, className }: Props) => {
+const NavBarList = ({ className }: Props) => {
   return (
-    <ul onClick={() => handleNavBarClick} className={className}>
+    <ul className={className}>
       <li className="pt-4 pointer">
       <Link to="/" className="text-reset text-decoration-none">
           mapa
