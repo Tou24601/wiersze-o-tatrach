@@ -23,10 +23,11 @@ const Header = () => {
           >
             <FontAwesomeIcon icon={faBars} style={{ color: "#757575" }} />
           </p>
-          <div className={isVisible ? "position-relative" : "d-none"} onClick={() => handleNavBarClick()}>
-            <NavBarList
-              className="smallNav d-flex flex-column flex"
-            />
+          <div
+            className={isVisible ? "position-relative" : "d-none"}
+            onClick={() => handleNavBarClick()}
+          >
+            <NavBarList className="smallNav d-flex flex-column flex" />
           </div>
         </div>
       </nav>

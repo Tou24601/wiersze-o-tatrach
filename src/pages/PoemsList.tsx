@@ -22,11 +22,11 @@ const PoemsList = ({ poemsData }: Props) => {
             to={`/${item.id.toString()}`}
             className="text-reset text-decoration-none"
           >
-              <ListTitleAuthorHolder
-                id={item.id}
-                title={item.title}
-                authors={item.authors}
-              />
+            <ListTitleAuthorHolder
+              id={item.id}
+              title={item.title}
+              authors={item.authors}
+            />
           </Link>
         </li>
       ))}

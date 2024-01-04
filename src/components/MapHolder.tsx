@@ -42,14 +42,11 @@ function Map({ poemsData }: Props) {
         {poemsData.map((item: Poem) => {
           return (
             <>
-            
               <MarkerF
                 position={{ lat: item.lat, lng: item.lng }}
                 key={item.id}
                 onClick={() => handleClick(item.id.toString())}
-              >
-
-              </MarkerF>
+              ></MarkerF>
             </>
           );
         })}
@@ -57,4 +54,3 @@ function Map({ poemsData }: Props) {
     </>
   );
 }
-

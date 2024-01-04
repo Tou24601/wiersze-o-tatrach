@@ -8,7 +8,7 @@ const NavBarList = ({ className }: Props) => {
   return (
     <ul className={className}>
       <li className="pt-4 pointer">
-      <Link to="/" className="text-reset text-decoration-none">
+        <Link to="/" className="text-reset text-decoration-none">
           mapa
         </Link>
       </li>

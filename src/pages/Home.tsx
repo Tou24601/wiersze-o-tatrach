@@ -11,7 +11,6 @@ interface Props {
 }
 
 const Home = ({ poemsData }: Props) => {
-  
   return (
     <>
       <MapHolder poemsData={poemsData} />
