@@ -1,6 +1,6 @@
 import { useState } from "react";
 import NavBarList from "./NavBarList";
-import Logo from "../assets/favicon.png";
+import Logo from "../assets/tatry.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 

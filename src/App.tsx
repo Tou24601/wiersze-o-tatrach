@@ -1,5 +1,6 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import { HashRouter as BrowserRouter, Routes, Route } from "react-router-dom";
+import {dataPoems} from "./service/api";
 import RootLayout from "./layouts/RootLayout";
 import ContainerLayout from "./layouts/ContainerLayout";
 import Home from "./pages/Home";
@@ -15,6 +16,11 @@ function App() {
   const url = "https://api.jsonbin.io/v3/b/656b45d90574da7622cf41c2";
 
   useEffect(() => {
+    const newData = dataPoems;
+    setPoemsData(newData)
+  }, [])
+
+ /* useEffect(() => {
     const newFetchPoems = async () => {
       const result = await fetch(url);
       result.json().then((json) => {
@@ -23,6 +29,7 @@ function App() {
     };
     newFetchPoems();
   }, []);
+*/
 
   return (
     <BrowserRouter>
