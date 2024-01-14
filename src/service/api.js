@@ -1,4 +1,4 @@
- let dataPoems;
+ /*let dataPoems;
 
 const newFetchPoems = async () => {
     const result = await fetch(url);
@@ -7,4 +7,4 @@ const newFetchPoems = async () => {
     });
   };
 
-  export default {dataPoems};
+  export default {dataPoems};*/
