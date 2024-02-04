@@ -44,7 +44,7 @@ ul {
 .smallNav {
   background-color: rgba(255, 255, 255, 0.8);
   border: 2px solid rgb(117, 117, 117);
-  position: absolute;
+  position: sticky;
   padding: 20px 30px;
   z-index: 1;
 }
@@ -67,7 +67,7 @@ ul {
 }
 
 .shadow {
-  width: 110vw;
+  width: 200vw;
   background: rgb(255, 250, 250);
   background: linear-gradient(
     90deg,
