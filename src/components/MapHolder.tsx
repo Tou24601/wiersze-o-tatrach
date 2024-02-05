@@ -1,5 +1,5 @@
-import { useMemo } from "react";
-import { GoogleMap, useLoadScript, MarkerF } from "@react-google-maps/api";
+//import { useMemo } from "react";
+//import { GoogleMap, useLoadScript, MarkerF } from "@react-google-maps/api";
 /*
 interface Poem {
   lat: number;
@@ -54,6 +54,7 @@ function Map({ poemsData }: Props) {
     </div>
   );
 }*/
+
 interface Poem {
   lat: number;
   lng: number;
