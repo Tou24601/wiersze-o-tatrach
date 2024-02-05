@@ -1,4 +1,4 @@
-import MapHolder from "../components/MapHolder";
+/*import MapHolder from "../components/MapHolder";
 
 interface Poem {
   lat: number;
@@ -16,6 +16,14 @@ const Home = ({ poemsData }: Props) => {
       <MapHolder poemsData={poemsData} />
     </>
   );
-};
+};*/
+
+const Home = () => {
+  return (
+    <>
+      <p>Hello. I'm the problem</p>
+    </>
+  );
+}
 
 export default Home;

@@ -1,6 +1,6 @@
 import { useMemo } from "react";
 import { GoogleMap, useLoadScript, MarkerF } from "@react-google-maps/api";
-
+/*
 interface Poem {
   lat: number;
   lng: number;
@@ -53,4 +53,8 @@ function Map({ poemsData }: Props) {
       </GoogleMap>
     </div>
   );
+}*/
+
+export default function MapHolder() {
+  return <div><p>Hello</p></div>
 }
