@@ -32,7 +32,7 @@ function Map({ poemsData }: Props) {
     window.open(`#/${newId}`, "_self");
   };
   return (
-    <>
+    <div className="mainContainer">
       {" "}
       <GoogleMap
         zoom={12.5}
@@ -51,6 +51,6 @@ function Map({ poemsData }: Props) {
           );
         })}
       </GoogleMap>
-    </>
+    </div>
   );
 }
