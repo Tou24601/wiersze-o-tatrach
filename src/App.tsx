@@ -2,7 +2,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { HashRouter as BrowserRouter, Routes, Route } from "react-router-dom";
 import RootLayout from "./layouts/RootLayout";
 import ContainerLayout from "./layouts/ContainerLayout";
-import Home from "./pages/Home";
+import MapPage from "./pages/MapPage";
 import PoemsList from "./pages/PoemsList";
 import CreditsList from "./pages/CreditsList";
 import PoemPage from "./pages/PoemPage";
