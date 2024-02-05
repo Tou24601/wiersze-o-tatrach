@@ -54,7 +54,15 @@ function Map({ poemsData }: Props) {
     </div>
   );
 }*/
+interface Poem {
+  lat: number;
+  lng: number;
+  id: number;
+}
 
-export default function MapHolder() {
+interface Props {
+  poemsData: Array<Poem>;
+}
+export default function MapHolder({ poemsData }: Props) {
   return <div><p>Hello</p></div>
 }
