@@ -10,7 +10,7 @@ interface Props {
   poemsData: Array<Poem>;
 }
 
-const Home = ({ poemsData }: Props) => {
+const MapPage = ({ poemsData }: Props) => {
   return (
     <>
       <MapHolder poemsData={poemsData} />
@@ -18,4 +18,4 @@ const Home = ({ poemsData }: Props) => {
   );
 };
 
-export default Home;
+export default MapPage;

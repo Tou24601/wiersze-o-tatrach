@@ -64,5 +64,5 @@ interface Props {
   poemsData: Array<Poem>;
 }
 export default function MapHolder({ poemsData }: Props) {
-  return <div><p>Hello</p></div>
+  return <h1 className="mainContainer">Hello</h1>
 }
