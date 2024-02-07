@@ -32,6 +32,7 @@ ul {
   transition: 0.5s;
   color: rgb(117, 117, 117);
   box-shadow: inset -7px -7px 23px 0px rgba(117, 117, 117, 1);
+  z-index: 3;
 }
 
 .logo {
@@ -55,12 +56,12 @@ ul {
   display: none;
 }
 
-
 .mainContainer {
   width: 100vw;
   height: calc(100vh - 60px);
   position: absolute;
   bottom: 0px;
+  padding-top: 60px;
   overflow: scroll;
 }
 
@@ -144,6 +145,8 @@ ul {
     width: calc(100vw - 150px);
     height: 100vh;
     right: 0px;
+    padding-top: 0px;
+    padding-left: 150px;
   }
 
   .poemTitle {

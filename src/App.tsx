@@ -14,7 +14,6 @@ function App() {
 
   const url = "https://api.jsonbin.io/v3/b/656b45d90574da7622cf41c2";
 
-
   useEffect(() => {
     const newFetchPoems = async () => {
       const result = await fetch(url);
@@ -25,14 +24,12 @@ function App() {
     newFetchPoems();
   }, []);
 
-
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<RootLayout />}>
-        <Route index element={<MapPage poemsData={poemsData} />} />
+          <Route index element={<MapPage poemsData={poemsData} />} />
           <Route element={<ContainerLayout />}>
-
             <Route path="lista" element={<PoemsList poemsData={poemsData} />} />
             <Route
               path="kredyty"

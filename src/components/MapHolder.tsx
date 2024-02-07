@@ -1,6 +1,6 @@
-//import { useMemo } from "react";
-//import { GoogleMap, useLoadScript, MarkerF } from "@react-google-maps/api";
-/*
+import { useMemo } from "react";
+import { GoogleMap, useLoadScript, MarkerF } from "@react-google-maps/api";
+
 interface Poem {
   lat: number;
   lng: number;
@@ -32,7 +32,7 @@ function Map({ poemsData }: Props) {
     window.open(`#/${newId}`, "_self");
   };
   return (
-    <div className="mainContainer">
+    <div className="">
       {" "}
       <GoogleMap
         zoom={12.5}
@@ -53,17 +53,4 @@ function Map({ poemsData }: Props) {
       </GoogleMap>
     </div>
   );
-}*/
-
-interface Poem {
-  lat: number;
-  lng: number;
-  id: number;
-}
-
-interface Props {
-  poemsData: Array<Poem>;
-}
-export default function MapHolder({ poemsData }: Props) {
-  return <h1 className="mainContainer">Hello</h1>
 }
