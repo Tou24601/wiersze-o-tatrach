@@ -22,6 +22,7 @@ function App() {
       });
     };
     newFetchPoems();
+    alert("Wybierz lokalizację, aby sprawdzić, jaki wiersz polskich poetów łączy się z tym miejcem!");
   }, []);
 
   return (

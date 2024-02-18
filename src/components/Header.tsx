@@ -1,6 +1,7 @@
 import { useState } from "react";
 import NavBarList from "./NavBarList";
 import Logo from "../assets/tatry.png";
+import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 
@@ -13,7 +14,9 @@ const Header = () => {
 
   return (
     <header className="header">
-      <img src={Logo} alt="Wiersze o Tatrach" className="logo" />
+      <Link to="/" className="">
+        <img src={Logo} alt="Wiersze o Tatrach" className="logo" />
+      </Link>
       <nav className="navBar p-4 pt-5">
         <NavBarList className="largeNav" />
         <div className="d-lg-none">
