@@ -3,6 +3,7 @@ import { HashRouter as BrowserRouter, Routes, Route } from "react-router-dom";
 import RootLayout from "./layouts/RootLayout";
 import ContainerLayout from "./layouts/ContainerLayout";
 import MapPage from "./pages/MapPage";
+import About from "./pages/About";
 import PoemsList from "./pages/PoemsList";
 import CreditsList from "./pages/CreditsList";
 import PoemPage from "./pages/PoemPage";
@@ -33,6 +34,7 @@ function App() {
         <Route path="/" element={<RootLayout />}>
           <Route index element={<MapPage poemsData={poemsData} />} />
           <Route element={<ContainerLayout />}>
+            <Route path="about" element={<About />} />
             <Route path="lista" element={<PoemsList poemsData={poemsData} />} />
             <Route
               path="kredyty"
