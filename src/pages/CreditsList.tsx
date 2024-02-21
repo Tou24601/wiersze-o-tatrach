@@ -19,7 +19,7 @@ interface Props {
 
 const CreditsList = ({ poemsData }: Props) => {
   return (
-    <ul>
+    <div><ul>
       {poemsData.map((item: Poem) => (
         <li key={item.id} className="textPadding">
           <Link
@@ -42,6 +42,9 @@ const CreditsList = ({ poemsData }: Props) => {
         </li>
       ))}
     </ul>
+    <br />
+    <p className="poemFontSizing">Aplikacja: <a href="https://joannakolakowska.netlify.app/" className="text-reset text-decoration-none" target="_blank" rel="noreferrer">Joanna Kołakowska</a></p>
+    </div>
   );
 };
 

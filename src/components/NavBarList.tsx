@@ -7,6 +7,11 @@ interface Props {
 const NavBarList = ({ className }: Props) => {
   return (
     <ul className={className}>
+            <li className="pt-4 pointer">
+        <Link to="/about" className="text-reset text-decoration-none">
+          o stronie
+        </Link>
+      </li>
       <li className="pt-4 pointer">
         <Link to="/" className="text-reset text-decoration-none">
           mapa
