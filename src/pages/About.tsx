@@ -1,7 +1,7 @@
 const About = () => {
   return (
     <div className=" about col-lg-8 col-5">
-      <p className="poemTitle">Oto poetycka mapa Tatr!</p>
+      <p className="poemTitle">Mapa poetycka Tatr!</p>
       <br />
       <br />
       <p className="poemFontSizing">
