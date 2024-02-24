@@ -1,7 +1,7 @@
 const About = () => {
   return (
     <div className=" about col-lg-8 col-5">
-      <p className="poemTitle">Oto poetycka mapa Tatr</p>
+      <p className="poemTitle">Oto poetycka mapa Tatr!</p>
       <br />
       <br />
       <p className="poemFontSizing">
@@ -17,10 +17,10 @@ const About = () => {
         Przedstawiamy poetycki przewodnik po&nbsp;Tatrach&nbsp;– na mapie
         zaznaczyliśmy miejsca, które w&nbsp;swoich wierszach opisywali
         m.in.&nbsp;poeci Młodej Polski. Wystarczy wybrać interesujący nas
-        punkt&nbsp;–szczyt, dolinę czy&nbsp;górskie jezioro&nbsp;– aby przekonać
-        się, jak miejsce to postrzegali artyści. Mapa pozwala też dowiedzieć
-        się, których lokalizacji dokładnie dotyczą utwory znane nam&nbsp;z
-        lekcji polskiego: tajemnicze Ciemne Smreczyny, Wodospad
+        punkt&nbsp;– szczyt, dolinę czy&nbsp;górskie jezioro&nbsp;– aby
+        przekonać się, jak miejsce to postrzegali artyści. Mapa pozwala też
+        dowiedzieć się, których lokalizacji dokładnie dotyczą utwory znane nam
+        z&nbsp;lekcji polskiego: tajemnicze Ciemne Smreczyny, Wodospad
         Mickiewicza&nbsp;czy Siklawy.
       </p>
       <br />
