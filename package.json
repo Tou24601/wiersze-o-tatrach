@@ -49,6 +49,6 @@
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "react-router-dom": "^6.19.0",
-    "typescript": "^5.3.3"
+    "typescript": "^5.2.0"
   }
 }
