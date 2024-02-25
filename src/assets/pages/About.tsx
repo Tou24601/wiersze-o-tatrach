@@ -18,7 +18,7 @@ const About = () => {
         zaznaczyliśmy miejsca, które w&nbsp;swoich wierszach opisywali
         m.in.&nbsp;poeci Młodej Polski. Wystarczy wybrać interesujący nas
         punkt&nbsp;– szczyt, dolinę czy&nbsp;górskie jezioro&nbsp;– aby
-        przekonać się, jak miejsce to postrzegali artyści. Mapa gór pozwala też
+        przekonać się, jak miejsce to postrzegali artyści. Mapa pozwala też
         dowiedzieć się, których lokalizacji dokładnie dotyczą utwory znane nam
         z&nbsp;lekcji polskiego: tajemnicze Ciemne Smreczyny, Wodospad
         Mickiewicza&nbsp;czy Siklawy.
