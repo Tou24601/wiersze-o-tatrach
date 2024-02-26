@@ -15,6 +15,12 @@ function App() {
 
   const url = "https://api.jsonbin.io/v3/b/656b45d90574da7622cf41c2";
 
+  const openInstructions = () => {
+    alert(
+      "Wybierz lokalizację, by sprawdzić, jaki wiersz polskich poetów łączy się z tym miejcem!"
+    );
+  };
+
   useEffect(() => {
     const newFetchPoems = async () => {
       const result = await fetch(url);
@@ -23,9 +29,7 @@ function App() {
       });
     };
     newFetchPoems();
-    alert(
-      "Wybierz lokalizację, by sprawdzić, jaki wiersz polskich poetów łączy się z tym miejcem!"
-    );
+    setTimeout(openInstructions, 500);
   }, []);
 
   return (
