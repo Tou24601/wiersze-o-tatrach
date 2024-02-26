@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import MapHolder from "../components/MapHolder";
 
 interface Poem {
