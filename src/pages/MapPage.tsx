@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import MapHolder from "../components/MapHolder";
 
 interface Poem {
@@ -9,12 +8,13 @@ interface Poem {
 
 interface Props {
   poemsData: Array<Poem>;
+  handleLoadedMap: void;
 }
 
-const MapPage = ({ poemsData }: Props) => {
+const MapPage = ({ poemsData, handleLoadedMap }: Props) => {
   return (
     <>
-      <MapHolder poemsData={poemsData} />
+      <MapHolder poemsData={poemsData} handleLoadedMap={handleLoadedMap} />
     </>
   );
 };

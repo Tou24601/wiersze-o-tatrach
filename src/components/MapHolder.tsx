@@ -1,4 +1,4 @@
-import { useMemo } from "react";
+import { useMemo, useEffect, useState } from "react";
 import { GoogleMap, useLoadScript, MarkerF } from "@react-google-maps/api";
 
 interface Poem {
@@ -9,18 +9,24 @@ interface Poem {
 
 interface Props {
   poemsData: Array<Poem>;
+  handleLoadedMap: void;
 }
 
-export default function MapHolder({ poemsData }: Props) {
+export default function MapHolder({ poemsData, handleLoadedMap }: Props) {
   const { isLoaded } = useLoadScript({
     googleMapsApiKey: "AIzaSyCbWX4ZQ15_lzRvRWoGPsp9xDII2k5fSls",
   });
-
+  //const [mapReady, setMapReady] = useState(false);
+  useEffect(() => {
+    handleLoadedMap(true)
+  }, [isLoaded, true]);
   if (!isLoaded) {
     return <div>Zaczekaj na załadowanie się mapy</div>;
   }
-  return <Map poemsData={poemsData} />;
+  return <Map poemsData={poemsData} handleLoadedMap={handleLoadedMap} />;
 }
+
+
 
 function Map({ poemsData }: Props) {
   const center = useMemo(

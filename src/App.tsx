@@ -23,16 +23,23 @@ function App() {
       });
     };
     newFetchPoems();
+  /*  alert(
+      "Wybierz lokalizację, aby sprawdzić, jaki wiersz polskich poetów łączy się z tym miejcem!"
+    );*/
+  }, []);
+
+  const callAlert = (isMapLoaded) => {
+    if (isMapLoaded) {
     alert(
       "Wybierz lokalizację, aby sprawdzić, jaki wiersz polskich poetów łączy się z tym miejcem!"
-    );
-  }, []);
+    );}
+  }
 
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<RootLayout />}>
-          <Route index element={<MapPage poemsData={poemsData} />} />
+          <Route index element={<MapPage poemsData={poemsData} handleLoadedMap={callAlert} />} />
           <Route element={<ContainerLayout />}>
             <Route path="about" element={<About />} />
             <Route path="lista" element={<PoemsList poemsData={poemsData} />} />
