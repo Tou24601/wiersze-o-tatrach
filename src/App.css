@@ -67,6 +67,7 @@ ul {
 .poemHolder {
   background-position: left;
   background-size: cover;
+  position: relative;
 }
 
 .shadow {
@@ -78,9 +79,6 @@ ul {
     rgba(255, 250, 250, 0.75) 73%,
     rgba(255, 255, 255, 0.5) 100%
   );
-}
-.backgroundImage {
-  
 }
 
 .poemTitle {
