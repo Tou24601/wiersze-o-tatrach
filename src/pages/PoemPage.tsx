@@ -23,8 +23,9 @@ const PoemPage = ({ poemsData }: Props) => {
     <>
       <div
         className="poemHolder mainContainer"
-        style={{ backgroundImage: `url(${data.poems[currentPoemId].picture})` }}
+       /* style={{ backgroundImage: `url(${data.poems[currentPoemId].picture})` }}*/
       >
+        <img src={data.poems[currentPoemId].picture} alt="mapa" />
         <div className="shadow position-relative p-3 pt-5 p-lg-5 ">
           <p
             className="poemTitle"
